@@ -1,4 +1,4 @@
-package flatmap;
+package com.sssm.lambdasandstreams.flatmap;
 
 import java.util.Arrays;
 import java.util.List;

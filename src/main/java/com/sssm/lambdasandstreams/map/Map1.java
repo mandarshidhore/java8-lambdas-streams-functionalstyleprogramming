@@ -1,4 +1,4 @@
-package map;
+package com.sssm.lambdasandstreams.map;
 
 import static java.util.stream.Collectors.toList;
 
