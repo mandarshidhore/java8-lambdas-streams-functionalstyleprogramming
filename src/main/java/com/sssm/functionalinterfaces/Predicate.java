@@ -1,5 +1,8 @@
 package com.sssm.functionalinterfaces;
 
+import java.util.function.BiPredicate;
+import java.util.function.IntPredicate;
+
 public class Predicate {
 
 	public static void main(String[] args) {
@@ -15,12 +18,23 @@ public class Predicate {
 		MyPredicate<Integer> predicateInt = x -> (x % 2 == 0);
 		System.out.println("is 3 an even number = " + predicateInt.test(3));
 		System.out.println("is 4 an even number = " + predicateInt.test(4));
+		
+		System.out.println("\n----\n");
+		
+		BiPredicate<String, String> myBiPredicate = (x, y) -> x.equalsIgnoreCase(y);
+		System.out.println("COLOR same as COLOR = " + myBiPredicate.test("COLOR", "COLOR"));
+		System.out.println("COLOR same as COLOUR = " + myBiPredicate.test("COLOR", "COLOUR"));
+		
+		System.out.println("\n----\n");
+		
+		IntPredicate inPredicate = i -> (i < 5);
+		System.out.println("is 3 less than 5 = " + inPredicate.test(3));
 	}
 
 }
 
-// Represents a predicate (boolean-valued function) of one argument.
-// This is a functional interface whose functional method is test(Object).
+// Represents a predicate (boolean-valued function) of one argument
+// This is a functional interface whose functional method is test(Object)
 interface MyPredicate<T> {
 	public boolean test(T t);
 }

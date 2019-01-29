@@ -3,6 +3,8 @@ package com.sssm.functionalinterfaces;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.IntConsumer;
+import java.util.function.ObjDoubleConsumer;
+import java.util.function.ObjLongConsumer;
 
 public class Consumer {
 
@@ -41,6 +43,16 @@ public class Consumer {
 		intConsumer.accept(5);
 		List<Integer> integers = Arrays.asList(1, 2, 3);
 		integers.forEach(element -> intConsumer.accept(element));
+
+		// ObjLongConsumer in JDK
+		ObjLongConsumer<Integer> objLongConsumer = (i, j) -> System.out
+				.println("\nInteger " + i + " + Integer " + j + " = Long " + (i + j));
+		objLongConsumer.accept(5, 5);
+
+		// ObjDoubleConsumer in JDK
+		ObjDoubleConsumer<Integer> objDoubleConsumer = (i, j) -> System.out
+				.println("\nInteger " + i + " + Double " + j + " = Double " + (i + j));
+		objDoubleConsumer.accept(5, 5);
 	}
 
 }
