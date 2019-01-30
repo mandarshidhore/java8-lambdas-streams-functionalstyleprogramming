@@ -46,7 +46,7 @@ public class Consumer {
 
 		// ObjLongConsumer in JDK
 		ObjLongConsumer<Integer> objLongConsumer = (i, j) -> System.out
-				.println("\nInteger " + i + " + Integer " + j + " = Long " + (i + j));
+				.println("\nInteger " + i + " + Long " + j + " = Long " + (i + j));
 		objLongConsumer.accept(5, 5);
 
 		// ObjDoubleConsumer in JDK

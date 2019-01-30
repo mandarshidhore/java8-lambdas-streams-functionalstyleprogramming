@@ -11,7 +11,7 @@ public class Supplier {
 
 		System.out.println("4 > 5 ? = " + isGreater(4, 5));
 
-		System.out.println("4 x 5 = " + multiply(4));
+		System.out.println("4 x 5 = " + multiplyBy5(4));
 	}
 
 	public static void print(MySupplier<String> s) {
@@ -23,7 +23,7 @@ public class Supplier {
 		return booleanSupplier.getAsBoolean();
 	}
 
-	public static int multiply(int x) {
+	public static int multiplyBy5(int x) {
 		IntSupplier intSupplier = () -> x * 5;
 		return intSupplier.getAsInt();
 	}
