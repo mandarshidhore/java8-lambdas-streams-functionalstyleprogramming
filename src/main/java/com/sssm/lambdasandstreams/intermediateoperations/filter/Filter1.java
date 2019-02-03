@@ -1,4 +1,4 @@
-package com.sssm.lambdasandstreams.filter;
+package com.sssm.lambdasandstreams.intermediateoperations.filter;
 
 import java.util.ArrayList;
 import java.util.List;

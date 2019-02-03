@@ -1,4 +1,4 @@
-package com.sssm.lambdasandstreams.map;
+package com.sssm.lambdasandstreams.intermediateoperations.map;
 
 import static java.util.stream.Collectors.toList;
 
